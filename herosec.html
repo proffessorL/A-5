@@ -4,69 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="import.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
 
-    <title>A-5</title>
+    <title>Hero</title>
 </head>
 
 <body>
-
-    <!-- Navbar -->
-    <nav class="flex justify-between items-center px-6 py-4 bg-white shadow">
-
-        <div class="flex items-center gap-2">
-            <img src="./assets/logo.png" alt="logo" class="w-8 h-8">
-            <h1 class="text-lg font-bold text-green-700"><span class="text-[20px]">Emergency</span><br>Service </h1>
-        </div>
-
-
-        <div class="flex items-center gap-6">
-
-            <div class="flex items-center gap-1 bg-green-100  px-2 py-1 rounded-[40px] h-[52px] w-[70px] font-bold">
-                <span id="heartCount">0</span>
-                <img src="./assets/heart.png" alt="" class="h-7">
-            </div>
-
-            <div
-                class="flex items-center gap-1 bg-green-100  px-2 py-1 rounded-[40px] h-[52px] w-[80px] text-center font-bold">
-                <span id="coinCount">100</span>
-                <img src="./assets/coin.png" alt="" class="h-7">
-            </div>
-
-            <div
-                class="flex items-center gap-1 bg-green-600  px-2 py-1 rounded-[40px] h-[52px] w-[90px] font-bold text-white">
-                <span id="copyCount">0</span> Copy
-            </div>
-        </div>
-    </nav>
-
-
-    <!-- Hero Section -->
-    <section
-        class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-white py-12 flex flex-col items-center text-center">
-
-        <img src="./assets/logo-dark.png" alt="BD Logo" class="w-20 h-20 mb-4">
-
-
-        <h2 class="text-2xl md:text-3xl font-bold mb-2">Emergency Service Directory</h2>
-
-
-        <p class="text-sm md:text-lg">Government Emergency Services at Your Fingertip – A Project by Government of the
-            People’s Republic of Bangladesh</p>
-    </section>
-
     <!-- Main Section -->
     <main class="p-6">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
             <!-- Card Section -->
             <section class="lg:col-span-2">
-
+                
 
                 <!-- Card Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -75,15 +30,9 @@
                     <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
                         <!-- Top: Icon + Heart -->
                         <div class="flex justify-between items-center mb-2">
-                            <div
-                                class="h-12 w-15 flex justify-center items-center border-2 border-amber-600 p-3 bg-red-200 rounded-[8px] ">
-                                <img class="h-9" src="./assets/emergency.png" alt="">
-                            </div>
-
-
-                            <i class="fa-regular fa-heart text-gray-400 hover:text-red-500 heart-btn"></i>
-
-
+                            <div class="h-12 w-15 flex justify-center items-center border-2 border-amber-600 p-3 bg-red-200 rounded-[8px] "><img class="h-9" src="./assets/emergency.png" alt=""></div>
+                            <i class="fa-regular fa-heart text-gray-400 hover:text-red-500"
+                                onclick="increaseHeart()"></i>
                         </div>
 
                         <!-- Name -->
@@ -120,9 +69,7 @@
             <aside class="bg-white rounded-2xl shadow p-4">
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-lg font-bold"> <i class="fa-regular fa-clock"></i> Call History</h3>
-                    <button
-                        class="btn btn-sm btn-error w-23 bg-green-600 text-white py-1.5 rounded-[20px] hover:bg-green-700 transition"
-                        onclick="clearHistory()">Clear</button>
+                    <button class="btn btn-sm btn-error w-23 bg-green-600 text-white py-1.5 rounded-[20px] hover:bg-green-700 transition" onclick="clearHistory()">Clear</button>
                 </div>
                 <ul id="historyList" class="space-y-2 text-sm text-gray-700">
                     <!-- history items will appear here -->
@@ -131,8 +78,6 @@
 
         </div>
     </main>
-
-    <script src="./script.js"></script>
 
 </body>
 
