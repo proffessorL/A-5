@@ -17,16 +17,16 @@
 - 2. Add content / attributes (texts/classs/id etc) ... ExaMple : newDiv.textContent = "Hello, I’m new here!";
 - 3. Insert into the DOM usung append/prepend/beforer after An example of creating an element and insert it into DOM :
 
-     ```html
-<div id="container">yoooooo..</div> 
-    ```js
+```     
+<div id="container">div-1</div> 
+ 
 <script> 
   const newDiv = document.createElement("div");
   newDiv.textContent = "Hello, I’m new here!"; 
   newDiv.className = "highlight"; 
   document.getElementById("container").appendChild(newDiv);
 </script>
-
+```
 
 
 
